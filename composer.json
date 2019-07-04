@@ -1,0 +1,28 @@
+{
+  "name": "sweet",
+  "description": "sweet framework",
+  "keywords": [
+    "swoole",
+    "mvc",
+    "php"
+  ],
+  "authors": [
+    {
+      "name": "wushixing",
+      "email": "864321211@qq.com.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "sweet\\": "sweet"
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "nikic/fast-route": "*",
+    "easyswoole/http": "^1.0",
+    "twig/twig": "~1.0",
+    "ext-swoole": ">=4.2.9",
+    "ext-seaslog": ">=1.9.0"
+  }
+}
