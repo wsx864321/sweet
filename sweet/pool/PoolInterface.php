@@ -5,6 +5,12 @@
  * Time: 18:14
  */
 
+namespace sweet\pool;
+/**
+ * Interface PoolInterface
+ * @package sweet\pool
+ * @desc 连接池接口
+ */
 interface PoolInterface{
     /**
      * @return mixed
@@ -23,5 +29,5 @@ interface PoolInterface{
      * @return mixed
      * 获取长度
      */
-    public function getLenght();
+    public function getLength();
 }

@@ -10,7 +10,7 @@ namespace sweet\pool;
 use Co\Channel;
 use sweet\redis\Redis as sweetRedis;
 
-class RedisPool{
+class RedisPool implements PoolInterface {
     private static $_instance = null;
     private $pool;
     private $config;
