@@ -45,7 +45,7 @@ class Sweet{
 
         $http->on('workerStart',function($serv, $workerId){
             if (function_exists('opcache_reset')) {
-                //清除opcache 缓存，swoole模式下其实可以关闭opcache
+                //清除opcache 缓存
                 \opcache_reset();
             }
 

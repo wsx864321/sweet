@@ -20,10 +20,11 @@ class IndexController extends BaseController{
     public static $test = 1;
 
     public function actionIndex(){
-        $redis = RedisDriver::factory();
+        return "hello world";
+//        $redis = RedisDriver::factory();
 //        var_dump($redis);
-        $ret = $redis->get("name");
-        return $ret;
+//        $ret = $redis->get("name");
+//        return $ret;
 //        $context = Context::getContext();
 //        $request = $context->getRequest();
 //        return 'i am family by route!' . json_encode($request->get);

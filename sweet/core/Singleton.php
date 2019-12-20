@@ -10,6 +10,7 @@ namespace sweet\core;
 use sweet\coroutine\SweetCo;
 
 Trait Singleton{
+
     private static $instance;
     private static $coInstance = [];
 
@@ -50,6 +51,7 @@ Trait Singleton{
      * @desc 请求级别的单例,事实上这个单例如果是在子协程中创建的话，其实还是只是协程级别的单例，甚至
      * 都不能说是协程级别的，因为协程的调度是不可控的，也有可能几个子协程中都能访问到
      * 这种请求级别的单例的坑也会很多，在协程并发调度的时候也很容易遇到问题，
+     * 所以尽量不要在子协程中创建请求级别的单例
      */
     public static function getRequestInstance(...$args){
         $rootId = SweetCo::getRootId();

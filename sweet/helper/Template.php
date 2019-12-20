@@ -7,8 +7,6 @@
 
 namespace sweet\helper;
 
-
-
 use sweet\core\Config;
 use sweet\core\Singleton;
 use Twig\Environment;

@@ -76,7 +76,6 @@ class SweetCo{
         return go(function () use ($cb, $pid, $deferCb){
             $id = Coroutine::getCid();
             defer(function() use ($deferCb, $id){
-                var_dump($id);
                 //清除idmaps当中的关系树的协程id
                 self::clear($id);
                 self::call($deferCb);
@@ -100,7 +99,7 @@ class SweetCo{
             return null;
         }
 
-        if(is_object($cb) || (is_string($cb) && file_exists($cb))){
+        if(is_object($cb) || (is_string($cb) && function_exists($cb))){
             $ret = $cb(...$args);
         }elseif(is_array($cb)){
             list($obj, $method) = $cb;

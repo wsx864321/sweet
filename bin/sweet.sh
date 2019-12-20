@@ -26,7 +26,7 @@ getMasterPid(){
 #获取管理进程id
 getManagerPid(){
     #if []左右两边都要有空格
-    if [ -f "$APP_BIN/manager.pid"]
+    if [ -f "$APP_BIN/manager.pid" ]
     then
         MANAGER_ID=`cat $APP_PATH/manager.pid`
         echo $MANAGER_ID
@@ -61,7 +61,7 @@ case $ARG in
             exit 1
         else
             #停止服务
-            echo "Gracefully shutting down server "
+            echo "Gracefully shutting down server"
             kill $PID
            # sleep 1
             unlink $APP_BIN/master.pid
@@ -73,3 +73,4 @@ case $ARG in
         #重启sweet
         ;;
 esac
+

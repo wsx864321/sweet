@@ -26,7 +26,6 @@ class RedisDriver{
     public static function factory(){
         //获取当前协程id，每个协程都只能用自己的redis连接
         $id = SweetCo::getId();
-        var_dump(self::$connetions);
         if(isset(self::$connetions[$id])){
             return self::$connetions[$id];
         }
