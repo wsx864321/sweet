@@ -42,7 +42,7 @@ class Mysql{
             if($ret){
                 $this->slave[] = $slave;
             }else{
-                //todo log
+                //todo add log
             }
 
         }
