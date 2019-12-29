@@ -20,7 +20,7 @@ class IndexController extends BaseController{
     public static $test = 1;
 
     public function actionIndex(){
-        return "hello world";
+       // return "hello world";
 //        $redis = RedisDriver::factory();
 //        var_dump($redis);
 //        $ret = $redis->get("name");
